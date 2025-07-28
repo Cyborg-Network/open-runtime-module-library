@@ -68,6 +68,7 @@ mod tests {
 
 	#[derive_impl(frame_system::config_preludes::TestDefaultConfig as frame_system::DefaultConfig)]
 	impl frame_system::Config for Runtime {
+		type RuntimeEvent = RuntimeEvent;
 		type AccountId = u128;
 		type Lookup = IdentityLookup<Self::AccountId>;
 		type Block = Block;

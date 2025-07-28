@@ -22,6 +22,7 @@ pub type AccountId = AccountId32;
 
 #[derive_impl(frame_system::config_preludes::TestDefaultConfig as frame_system::DefaultConfig)]
 impl frame_system::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
 	type Nonce = u64;
 	type AccountId = AccountId;
 	type Lookup = IdentityLookup<Self::AccountId>;
